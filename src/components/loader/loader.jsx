@@ -4,11 +4,11 @@ import "./loader.css";
 const Loader = () => {
   return (
     <div class="loader-container ">
-      <svg viewBox="0 0 400 160">
+      <svg viewBox="0 0 500 200">
         <text x="50%" y="50%" dy=".32em" text-anchor="middle" class="text-body">
-          ƒαιѕαℓ
+          KLE RLS BCA
         </text>
-        <text
+        {/* <text
           x="50%"
           y="50%"
           dy=".32em"
@@ -17,7 +17,7 @@ const Loader = () => {
           class="text-body"
         >
           .
-        </text>
+        </text> */}
       </svg>
     </div>
   );

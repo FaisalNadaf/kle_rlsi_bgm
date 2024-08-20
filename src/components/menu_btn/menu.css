@@ -1,0 +1,216 @@
+:root {
+  --color-text: #151618;
+  --color-accent: #e76a10;
+  --color-bg: white;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  transition: color 0.5s ease-in-out;
+}
+
+img {
+  display: block;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+header {
+  margin: 3rem 4rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 100;
+  position: relative;
+}
+
+.header-side-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-side-content:last-child {
+  justify-content: flex-end;
+}
+
+.button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  left: 40px;
+  top: 40px;
+}
+
+.button.primary {
+  background-color: var(--color-accent);
+  color: white;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button.primary:hover {
+  background-color: var(--color-text);
+}
+
+#menu-button svg {
+  fill: var(--color-text);
+  transition: 0.5s ease-in-out;
+}
+
+ul.unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-social ul {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+#nav-social li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#nav-social li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 0.5rem;
+  background-color: var(--color-text);
+  margin-left: 1.5rem;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.container {
+  margin: 0 4rem;
+}
+
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+#hero-content {
+  margin-left: 4rem;
+}
+
+#hero h1,
+#hero p {
+  max-width: 32vw;
+  margin: 0 0 3rem;
+}
+
+#menu-container {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-text);
+  text-align: center;
+  display: grid;
+  place-content: center;
+  z-index: 99;
+  height: 0;
+  transition: height 0.5s cubic-bezier(0.14, 0.65, 0.15, 1);
+}
+
+#menu-container a {
+  display: inline-block;
+  font-size: 2.25rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  transition: color 0.5s ease-in-out;
+  color: var(--color-bg);
+}
+
+#menu-container a:hover {
+  color: var(--color-accent);
+}
+
+#menu-container li {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+:root[menu-open] #menu-container {
+  height: 100%;
+}
+
+:root[menu-open] #menu-container li {
+  opacity: 1;
+}
+
+:root[menu-open] #nav-social a {
+  color: var(--color-bg);
+}
+
+:root[menu-open] #nav-social li::after {
+  background-color: var(--color-bg);
+}
+.faisal {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 3rem;
+  left: 8rem;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+.faisal:hover {
+  opacity: 1;
+}
+
+/* Air */
+#menu-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  gap: 3.5px;
+}
+
+#menu-button span {
+  width: 25px;
+  height: 2.2px;
+
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform.3s ease-in-out, opacity.3s ease-in-out,
+    background-color.5s ease-in-out;
+}
+:root[menu-open] .faisal {
+  opacity: 0;
+}
+:root[menu-open] #menu-button span {
+  background-color: white;
+}
+:root[menu-open] #menu-button span:nth-child(1) {
+  transform: translate3d(0, 6px, 0) rotate(45deg);
+}
+:root[menu-open] #menu-button span:nth-child(2) {
+  transform: scale(0);
+  opacity: 0;
+}
+:root[menu-open] #menu-button span:nth-child(3) {
+  transform: translate3d(0, -6px, 0) rotate(-45deg);
+}
