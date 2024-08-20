@@ -25,7 +25,7 @@ a:hover {
 }
 
 header {
-  margin: 3rem 4rem 10rem;
+  /* margin: 3rem 4rem 10rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +122,7 @@ ul.unstyled {
 }
 
 #menu-container {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: var(--color-text);
   text-align: center;

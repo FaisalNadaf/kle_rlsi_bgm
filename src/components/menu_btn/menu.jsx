@@ -11,7 +11,7 @@ const Menu = () => {
 
   return (
     <>
-      <header>
+      <header className="absolute">
         <div className="header-side-content ">
           <button
             className="button  "
@@ -24,7 +24,7 @@ const Menu = () => {
           </button>
         </div>
       </header>
-      <div id="menu-container" className={menuOpen ? "open" : ""}>
+      <div id="menu-container" className={`${menuOpen ? "open" : ""} `} >
         <ul className="unstyled">
           <ul>
             <li>
