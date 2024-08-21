@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./menu.css";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,26 +25,44 @@ const Menu = () => {
           </button>
         </div>
       </header>
-      <div id="menu-container" className={`${menuOpen ? "open" : ""} `} >
+      <div id="menu-container" className={`${menuOpen ? "open" : ""} `}>
         <ul className="unstyled">
           <ul>
             <li>
-              <a href="#">AboutUs</a>
+              <Link to="/" onClick={handleMenuToggle}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#">Gallery</a>
+              <Link to="/aboutUs" onClick={handleMenuToggle}>
+                AboutUs
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/gallery" onClick={handleMenuToggle}>
+                Gallery
+              </Link>
             </li>
             <li>
-              <a href="#">Faculty</a>
+              <Link to="/faculty" onClick={handleMenuToggle}>
+                Faculty
+              </Link>
             </li>
             <li>
-              <a href="#">Academy Alliances</a>
+              <Link to="/academyAlliances" onClick={handleMenuToggle}>
+                Academy Alliances
+              </Link>
             </li>
             <li>
-              <a href="#">Placementes</a>
+              <Link to="/placementes" onClick={handleMenuToggle}>
+                Placementes
+              </Link>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <Link to="/contactUs" onClick={handleMenuToggle}>
+                Contact Us
+              </Link>
             </li>
           </ul>
         </ul>

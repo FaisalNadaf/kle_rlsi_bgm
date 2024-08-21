@@ -4,6 +4,12 @@ import Loader from "./components/loader/loader";
 import Menu from "./components/menu_btn/menu";
 import Faculty from "./pages/Faculty";
 import Header from "./components/Header";
+import { createBrowserRouter, Outlet } from "react-router-dom";
+import Gallery from "./pages/Gallery/Gallery";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import AcademyAlliances from "./pages/Academy Alliances/AcademyAlliances";
+import ContactUs from "./pages/Contact Us/ContactUs";
+import Placementes from "./pages/Placementes/Placementes";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -26,13 +32,50 @@ function App() {
           <div className="absolute w-[70%] mx-[15%] top-0 shadow-2xl rounded-xl ">
             <Header />
           </div>
-          {/* <HomePage /> */}
-          <Faculty />
+          <Outlet />
           <Menu />{" "}
         </>
       )}
     </>
   );
 }
+
+export const AppRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/faculty",
+        element: <Faculty />,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "/aboutUs",
+        element: <AboutUs />,
+      },
+      {
+        path: "/academyAlliances",
+        element: <AcademyAlliances />,
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUs />,
+      },
+      {
+        path: "/placementes",
+        element: <Placementes />,
+      },
+  
+    ],
+  },
+]);
 
 export default App;
