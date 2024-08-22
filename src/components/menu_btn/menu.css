@@ -192,7 +192,7 @@ ul.unstyled {
 #menu-button span {
   width: 25px;
   height: 2.2px;
-
+ 
   background-color: var(--color-text);
   border-radius: 2px;
   transition: transform.3s ease-in-out, opacity.3s ease-in-out,

@@ -10,6 +10,10 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import AcademyAlliances from "./pages/Academy Alliances/AcademyAlliances";
 import ContactUs from "./pages/Contact Us/ContactUs";
 import Placementes from "./pages/Placementes/Placementes";
+import Carousell from "./components/coursal/Coursal";
+import ControlledCarousel from "./components/coursal/Coursal";
+import DarkVariantExample from "./components/coursal/Coursal";
+import Coursal from "./components/coursal/Coursal";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,7 +33,7 @@ function App() {
         <Loader />
       ) : (
         <>
-          <div className="absolute w-[70%] mx-[15%] top-0 shadow-2xl rounded-xl ">
+          <div className="absolute w-[70%] mx-[15%] top-0  ">
             <Header />
           </div>
           <Outlet />
@@ -47,7 +51,7 @@ export const AppRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomePage />,
+        element: <Coursal />,
       },
       {
         path: "/faculty",
@@ -73,7 +77,6 @@ export const AppRouter = createBrowserRouter([
         path: "/placementes",
         element: <Placementes />,
       },
-  
     ],
   },
 ]);

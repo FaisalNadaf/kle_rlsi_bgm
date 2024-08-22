@@ -5,9 +5,7 @@ const FacultyCard = ({ e }) => {
   return (
     <li>
       <figure className="rounded-xl shadow-xl">
-        <a href="#">
-          <img src={e.img} alt="image not found" className="rounded-xl " />
-        </a>
+        <img src={e.img} alt="image not found" className="rounded-xl " />
         <figcaption>
           <main>
             <h3 className="text-xl font-bold">{e.name}</h3>

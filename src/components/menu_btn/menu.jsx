@@ -15,13 +15,13 @@ const Menu = () => {
       <header className="absolute">
         <div className="header-side-content ">
           <button
-            className="button  "
+            className="button hover:shadow rounded-full bg-transparent hover:shadow-white "
             id="menu-button"
             onClick={handleMenuToggle}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className=""></span>
+            <span className=""></span>
+            <span className=""></span>
           </button>
         </div>
       </header>

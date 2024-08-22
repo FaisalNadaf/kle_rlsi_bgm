@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="">
+    <div className="shadow-2xl rounded-full">
       {/* <Link to={"/"}> */}
         <img
           className="w-[100%] sticky bottom-0"
