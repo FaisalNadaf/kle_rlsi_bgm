@@ -1,6 +1,6 @@
 #hero {
   height: 100vh;
-  color: white;
+  /* color: white; */
   position: relative;
 }
 
@@ -8,7 +8,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(37, 53, 102, 0.9);
+  background: rgba(37, 53, 102, 0.85);
   z-index: -1;
 }
 

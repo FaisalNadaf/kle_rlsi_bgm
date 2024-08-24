@@ -14,6 +14,7 @@ import Carousell from "./components/coursal/Coursal";
 import ControlledCarousel from "./components/coursal/Coursal";
 import DarkVariantExample from "./components/coursal/Coursal";
 import Coursal from "./components/coursal/Coursal";
+import MagButton from "./components/magnitoButton/MagButton";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 3500);
 
     // Cleanup the timer when the component unmounts
     return () => clearTimeout(timer);
@@ -34,9 +35,18 @@ function App() {
       ) : (
         <>
           <div className="absolute w-[70%] mx-[15%] top-0  ">
-            <Header />
+            <div
+            //  className="fixed top-0 z-10 "
+            >
+              <Header />
+            </div>
           </div>
-          <Outlet />
+          <div
+          // className="z-0"
+          >
+            {" "}
+            <Outlet />
+          </div>
           <Menu />{" "}
         </>
       )}
@@ -51,7 +61,7 @@ export const AppRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Coursal />,
+        element: <HomePage />,
       },
       {
         path: "/faculty",
