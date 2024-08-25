@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="shadow-2xl rounded-full">
+    <div className="shadow-xl rounded-xl  mt-2 ">
       {/* <Link to={"/"}> */}
-        <img
-          className="w-[100%] sticky bottom-0"
-          src="src\assets\teachers\logo-header1-removebg-preview.png"
-        />
+      <img
+        className="w-[100%] "
+        src="src\assets\teachers\logo-header1-removebg-preview.png"
+      />
       {/* </Link> */}
       {/* <Dropdown /> */}
     </div>

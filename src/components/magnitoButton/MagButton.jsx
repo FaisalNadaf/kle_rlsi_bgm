@@ -69,9 +69,11 @@ const MagButton = ({ bg, h, w, p, txt }) => {
   }, []);
 
   return (
-    <div className="">
+    <div className="rounded-full">
       <button className="magneto">
-        <span className="text">{txt}</span>
+        <span className="text font-semibold text-white ">
+          {txt}
+        </span>
       </button>
       <div id="debugger"></div>
 

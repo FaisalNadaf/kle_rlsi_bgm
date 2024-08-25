@@ -73,6 +73,7 @@ header {
 }
 
 ul.unstyled {
+  display: none;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -140,7 +141,6 @@ ul.unstyled {
   margin-bottom: 1.4rem;
   transition: color 0.5s ease-in-out;
   color: var(--color-bg);
-
 }
 
 #menu-container a:hover {
@@ -198,6 +198,9 @@ ul.unstyled {
   border-radius: 2px;
   transition: transform.3s ease-in-out, opacity.3s ease-in-out,
     background-color.5s ease-in-out;
+}
+:root[menu-open] #menu-container .unstyled {
+  display: block;
 }
 :root[menu-open] .faisal {
   opacity: 0;
