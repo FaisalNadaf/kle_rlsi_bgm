@@ -103,7 +103,7 @@ const Coursal = () => {
       >
         <div
           ref={carouselRef}
-          className="h-[400px] w-[600px] shadow-xl rounded-lg border-b-2 overflow-hidden flex items-center"
+          className="h-[500px] w-[700px] shadow-xl rounded-lg border-b-2 overflow-hidden flex items-center"
         >
           {infiniteImages.map((image, index) => (
             <div
