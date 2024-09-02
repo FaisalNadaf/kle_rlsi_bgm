@@ -15,6 +15,7 @@ import ControlledCarousel from "./components/coursal/Coursal";
 import DarkVariantExample from "./components/coursal/Coursal";
 import Coursal from "./components/coursal/Coursal";
 import MagButton from "./components/magnitoButton/MagButton";
+import Convert from "./components/Convert";
 
 function App() {
   const [loading, setLoading] = useState(true);
